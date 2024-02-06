@@ -67,7 +67,45 @@ function calculateElectronicsBudget(laptopQnt, tabletsQnt, mobilesQnt) {
 
 }
 
-let totalBudget = calculateElectronicsBudget(3, 2, 3);
-console.log(totalBudget);
+// let totalBudget = calculateElectronicsBudget(1, 1, 1);
+// console.log(totalBudget);
+
+
+// ---------------------------------------------------------------//
+
+//-----problem 4 --------
+/* ---question: You are given an array of phone objects, each containing information about the model, brand, and price. Your task is to write a JavaScript function named findAveragePhonePrice that takes this array as input and returns the average price of phone. */
+
+
+
+const phones = [
+    { model: "PhoneA", brand: "Iphone", price: 95000 },
+    { model: "PhoneB", brand: "Samsung", price: 40000 },
+    { model: "PhoneC", brand: "Oppo", price: 26000 },
+    { model: "PhoneD", brand: "Nokia", price: 35000 },
+    { model: "PhoneE", brand: "Iphone", price: 105000 },
+    { model: "PhoneF", brand: "HTC", price: 48000 },
+
+];
+
+
+function findAveragePhonePrice(array) {
+    let total = 0;
+
+    for (let phone of array) {
+        total = total + phone.price;
+
+
+    }
+    console.log(total);
+    let length = array.length;
+    console.log(length);
+    let average = total / length;
+    return average;
+
+}
+
+let avgPhonePrice = findAveragePhonePrice(phones);
+console.log(avgPhonePrice);
 
 
